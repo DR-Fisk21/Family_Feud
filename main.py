@@ -7,12 +7,12 @@ answers = globals
 
 
 # Questions and answers
-base_questions = ["Name a fruit.", "Name a country.", "Name a superhero.", "Name a movie."]
+base_questions = ["Name a popular fruit.", "Name a popular country.", "Name a popular superhero.", "Name a popular movie."]
 base_answers = [
-    ["apple", "banana", "orange", "strawberry", "blue berry", "grape", "watermelon","avocado"],
-    ["usa", "canada", "japan", "australia", "italy", "china", "britain"],
-    ["superman", "spiderman", "batman", "wonder woman"],
-    ["titanic", "star wars", "the avengers", "jurassic park"]
+    ["apple", "banana", "orange", "strawberry", "blue berry", "grape", "watermelon", "avocado"],
+    ["usa", "canada", "japan", "australia", "italy", "china", "britain", "ukraine"],
+    ["superman", "spider-man", "batman", "wonder woman", "iron man", "hulk", "thor", "the flash"],
+    ["titanic", "star wars", "the avengers", "jurassic park", "toy story", "home alone", "die hard", "matrix"]
 ]
 questions = base_questions
 answers = base_answers
@@ -36,12 +36,12 @@ def play_game():
 
 	# Get user's choice
 	user_choice = input("Your answer: ")
-	remove_please = user_choice
+	
     
 	# Check if the answer is correct
 	if user_choice.lower() in possible_answers:
 		print ('yes')
-		answers.remove(remove_please)
+		#answers.remove(user_choice)
 	else:
 		print ('no')
         
