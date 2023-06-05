@@ -43,7 +43,8 @@ def play_game():
 	# Check if the answer is correct
 	if user_choice.lower() in possible_answers:
 		print ('yes')
-		answers.remove(user_choice)
+		answers[question_index].remove(user_choice)
+		print(answers)
 	else:
 		print ('no')
 		player1_strikes +=1
