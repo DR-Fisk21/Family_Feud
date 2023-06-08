@@ -97,7 +97,7 @@ def ad():
 	print("See you next time on...")
 	print("Family Game Fight! duh duh duh duh duh! *Clapping in the background*")
 	ad = input("")
-	print('Want a break from the ads?\nget premium spotifly-gold++ ultimate')
+	print('Want a break from the ads?\nget ultra premium spotifly 5-gold++ ultimate 7 deluxe edition')
 	exit = input()
 
 #Game over (When someone gets three strike)
