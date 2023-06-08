@@ -80,14 +80,16 @@ def play_game():
 
 # Intro
 def intro():
-    player1_strikes = 0
-    player2_strikes = 0
-    print('Welcome to Family Game Fight')
-    know = input("Do you know how to play? (Y/N) ")
-    if know.lower() == 'y':
-        print("Well Get Ready!")
-    if know.lower() == 'n':
-        how_to_play()
+	global player1_strikes
+	player1_strikes = 0
+	global player2_strikes
+	player2_strikes = 0
+	print('Welcome to Family Game Fight')
+	know = input("Do you know how to play? (Y/N) ")
+	if know.lower() == 'y':
+		print("Well Get Ready!")
+	if know.lower() == 'n':
+		how_to_play()
 
 #End of game
 def ad():
