@@ -2,11 +2,12 @@ import random
 
 questions = globals
 answers = globals
+
 player1_strikes = 0
 player2_strikes = 0
 
 # Questions and answers
-questions = ["Name a popular fruit.", "Name a popular country.", "Name a popular superhero.", "Name a popular movie.", "Name a popular video game", "Name a popular kids TV show", "Name a classic Monster", "Name a pupuler ememy from the TV show 'doctor who'"]
+questions = ["Name a popular fruit.", "Name a popular country.", "Name a popular superhero.", "Name a popular movie.", "Name a popular video game", "Name a popular kids TV show", "Name a classic Monster", "Name a populer ememy from the TV show 'doctor who'"]
 answers = [
     ["apple", "banana", "orange", "strawberry", "blue berry", "grape", "watermelon", "avocado"],
     ["usa", "canada", "japan", "australia", "italy", "china", "britain", "ukraine"],
@@ -14,8 +15,8 @@ answers = [
     ["titanic", "star wars", "the avengers", "jurassic park", "toy story", "home alone", "die hard", "matrix"],
     ["minecraft", "sonic", "doom", "super mario", "assassin creed", "hitman", "tetris", "five nights at freddys" ],
     ["thomas & friends", "power rangers", "pingu", "peppa pig", "bluey", "auther", "sesame street", "octonauts"],
-    ["vampire", "werewolf", "mummy", "zombie", "big foot", "ghost", "frankenstein monster", "the invisible man"],
-	["cybermen", "dalek", "sontaran", "weeping agles", "the master", "auton", "silurian", "ice warriors"]
+    ["vampire", "werewolf", "mummy", "zombie", "big foot", "ghost", "frankensteins monster", "the invisible man"],
+	["cybermen", "dalek", "sontaran", "weeping angels", "the master", "auton", "silurian", "ice warriors"]
 ]
 
 def how_to_play():
@@ -73,23 +74,20 @@ def play_game():
 
 	#check gameover	
 	if player1_strikes == 3:
-		player1_strikes -=3
-		player2_strikes -=3
 		gameover()
-		
 	elif player2_strikes == 3:
 		gameover()
-		player1_strikes -=3
-		player2_strikes -=3
 
 # Intro
 def intro():
-  print('Welcome to Family Game Fight')
-  know = input("Do you know how to play? (Y/N) ")
-  if know.lower() == 'y':
-      print("Well Get Ready!")
-  if know.lower() == 'n':
-      how_to_play()
+    player1_strikes = 0
+    player2_strikes = 0
+    print('Welcome to Family Game Fight')
+    know = input("Do you know how to play? (Y/N) ")
+    if know.lower() == 'y':
+        print("Well Get Ready!")
+    if know.lower() == 'n':
+        how_to_play()
 
 #End of game
 def ad():
@@ -102,23 +100,21 @@ def ad():
 
 #Game over (When someone gets three strike)
 def gameover():
-    print()
-    if player1_strikes == 3:
-        print("Player 2 You have won!")
-    elif player2_strikes == 3:
-        print("Player 1 You have won!")
-    print()
-    play_again = input("Do you wish to play again? (Y/N) ")
-    if play_again.lower() == "y":
-        intro()
-    else:
-        ad()
-        quit()
+	print()
+	if player1_strikes == 3:
+		print("Player 2 You have won!")			
+	elif player2_strikes == 3:
+		print("Player 1 You have won!")
+	print()
+	play_again = input("Do you wish to play again? (Y/N) ")
+	if play_again.lower() == "y":
+		intro()
+	else:
+		ad()
+		quit()
         
 #Start the Game
 intro()
 #Game Loop
 while True:
 	play_game()
-	
-
